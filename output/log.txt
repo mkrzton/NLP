@@ -1,0 +1,59 @@
+2022-05-27 12:00:24,000 model INFO: Using 1 GPUS
+2022-05-27 12:00:24,000 model INFO: Namespace(config_file='', opts=['SOLVER.MAX_EPOCHS', '1', 'SOLVER.BASE_LR', '0.0002'])
+2022-05-27 12:00:24,001 model INFO: Running with config:
+DATALOADER:
+  NUM_WORKERS: 8
+DATASETS:
+  TEST: data/datasets/test.csv
+  TEST_WA: data/datasets/STSint.testinput.answers-students.wa
+  TRAIN: data/datasets/train.csv
+MODEL:
+  DEVICE: cpu
+  DROPOUT: 0.25
+  HIDDEN_NEURONS: 1024
+  NUM_CLASSES: 6
+  VALTYP_CLASSES: 21
+OUTPUT_DIR: output
+SOLVER:
+  BASE_LR: 0.0002
+  BATCH_SIZE: 1
+  LOG_PERIOD: 100
+  MAX_EPOCHS: 1
+  OPTIMIZER_NAME: ADAM
+TEST:
+  BATCH_SIZE: 1
+  WEIGHT: 
+2022-05-27 12:01:47,972 model.train INFO: Start training
+2022-05-27 12:02:56,158 model.train INFO: EPOCH: [1/1] BATCHES [100/2941] loss summed: 8.988 loss MSE: 5.503 loss NLLL: 1.410 loss NLLL for Value-Type Pairs: 2.075
+2022-05-27 12:03:36,949 model.train INFO: EPOCH: [1/1] BATCHES [200/2941] loss summed: 5.023 loss MSE: 1.759 loss NLLL: 1.335 loss NLLL for Value-Type Pairs: 1.929
+2022-05-27 12:04:15,210 model.train INFO: EPOCH: [1/1] BATCHES [300/2941] loss summed: 3.906 loss MSE: 1.271 loss NLLL: 1.106 loss NLLL for Value-Type Pairs: 1.528
+2022-05-27 12:04:53,358 model.train INFO: EPOCH: [1/1] BATCHES [400/2941] loss summed: 4.726 loss MSE: 1.572 loss NLLL: 1.337 loss NLLL for Value-Type Pairs: 1.817
+2022-05-27 12:05:33,360 model.train INFO: EPOCH: [1/1] BATCHES [500/2941] loss summed: 3.881 loss MSE: 1.225 loss NLLL: 1.134 loss NLLL for Value-Type Pairs: 1.522
+2022-05-27 12:06:11,771 model.train INFO: EPOCH: [1/1] BATCHES [600/2941] loss summed: 3.782 loss MSE: 1.160 loss NLLL: 1.135 loss NLLL for Value-Type Pairs: 1.488
+2022-05-27 12:06:51,475 model.train INFO: EPOCH: [1/1] BATCHES [700/2941] loss summed: 4.313 loss MSE: 1.630 loss NLLL: 1.091 loss NLLL for Value-Type Pairs: 1.592
+2022-05-27 12:07:34,324 model.train INFO: EPOCH: [1/1] BATCHES [800/2941] loss summed: 4.365 loss MSE: 1.262 loss NLLL: 1.303 loss NLLL for Value-Type Pairs: 1.799
+2022-05-27 12:08:15,440 model.train INFO: EPOCH: [1/1] BATCHES [900/2941] loss summed: 3.539 loss MSE: 1.027 loss NLLL: 1.075 loss NLLL for Value-Type Pairs: 1.437
+2022-05-27 12:08:53,527 model.train INFO: EPOCH: [1/1] BATCHES [1000/2941] loss summed: 4.133 loss MSE: 1.301 loss NLLL: 1.159 loss NLLL for Value-Type Pairs: 1.673
+2022-05-27 12:09:34,297 model.train INFO: EPOCH: [1/1] BATCHES [1100/2941] loss summed: 4.162 loss MSE: 1.362 loss NLLL: 1.172 loss NLLL for Value-Type Pairs: 1.629
+2022-05-27 12:10:16,527 model.train INFO: EPOCH: [1/1] BATCHES [1200/2941] loss summed: 4.169 loss MSE: 1.342 loss NLLL: 1.186 loss NLLL for Value-Type Pairs: 1.642
+2022-05-27 12:10:54,251 model.train INFO: EPOCH: [1/1] BATCHES [1300/2941] loss summed: 3.564 loss MSE: 1.021 loss NLLL: 1.074 loss NLLL for Value-Type Pairs: 1.468
+2022-05-27 12:11:33,827 model.train INFO: EPOCH: [1/1] BATCHES [1400/2941] loss summed: 4.291 loss MSE: 1.149 loss NLLL: 1.283 loss NLLL for Value-Type Pairs: 1.858
+2022-05-27 12:12:12,914 model.train INFO: EPOCH: [1/1] BATCHES [1500/2941] loss summed: 4.198 loss MSE: 1.122 loss NLLL: 1.298 loss NLLL for Value-Type Pairs: 1.778
+2022-05-27 12:12:51,501 model.train INFO: EPOCH: [1/1] BATCHES [1600/2941] loss summed: 3.114 loss MSE: 0.758 loss NLLL: 1.011 loss NLLL for Value-Type Pairs: 1.345
+2022-05-27 12:13:34,063 model.train INFO: EPOCH: [1/1] BATCHES [1700/2941] loss summed: 3.615 loss MSE: 0.897 loss NLLL: 1.151 loss NLLL for Value-Type Pairs: 1.567
+2022-05-27 12:14:12,467 model.train INFO: EPOCH: [1/1] BATCHES [1800/2941] loss summed: 3.292 loss MSE: 1.012 loss NLLL: 0.962 loss NLLL for Value-Type Pairs: 1.317
+2022-05-27 12:14:51,515 model.train INFO: EPOCH: [1/1] BATCHES [1900/2941] loss summed: 3.277 loss MSE: 0.956 loss NLLL: 0.999 loss NLLL for Value-Type Pairs: 1.323
+2022-05-27 12:15:31,175 model.train INFO: EPOCH: [1/1] BATCHES [2000/2941] loss summed: 3.376 loss MSE: 0.912 loss NLLL: 1.064 loss NLLL for Value-Type Pairs: 1.399
+2022-05-27 12:16:11,959 model.train INFO: EPOCH: [1/1] BATCHES [2100/2941] loss summed: 3.791 loss MSE: 1.003 loss NLLL: 1.145 loss NLLL for Value-Type Pairs: 1.644
+2022-05-27 12:16:52,434 model.train INFO: EPOCH: [1/1] BATCHES [2200/2941] loss summed: 3.693 loss MSE: 1.113 loss NLLL: 1.103 loss NLLL for Value-Type Pairs: 1.477
+2022-05-27 12:17:33,168 model.train INFO: EPOCH: [1/1] BATCHES [2300/2941] loss summed: 3.421 loss MSE: 0.803 loss NLLL: 1.095 loss NLLL for Value-Type Pairs: 1.523
+2022-05-27 12:18:15,458 model.train INFO: EPOCH: [1/1] BATCHES [2400/2941] loss summed: 3.319 loss MSE: 0.838 loss NLLL: 1.064 loss NLLL for Value-Type Pairs: 1.417
+2022-05-27 12:18:56,437 model.train INFO: EPOCH: [1/1] BATCHES [2500/2941] loss summed: 3.116 loss MSE: 0.787 loss NLLL: 0.960 loss NLLL for Value-Type Pairs: 1.368
+2022-05-27 12:19:36,262 model.train INFO: EPOCH: [1/1] BATCHES [2600/2941] loss summed: 3.573 loss MSE: 0.971 loss NLLL: 1.140 loss NLLL for Value-Type Pairs: 1.462
+2022-05-27 12:20:17,628 model.train INFO: EPOCH: [1/1] BATCHES [2700/2941] loss summed: 4.055 loss MSE: 1.303 loss NLLL: 1.152 loss NLLL for Value-Type Pairs: 1.599
+2022-05-27 12:20:58,364 model.train INFO: EPOCH: [1/1] BATCHES [2800/2941] loss summed: 3.248 loss MSE: 0.734 loss NLLL: 1.061 loss NLLL for Value-Type Pairs: 1.453
+2022-05-27 12:21:39,365 model.train INFO: EPOCH: [1/1] BATCHES [2900/2941] loss summed: 3.163 loss MSE: 0.846 loss NLLL: 0.979 loss NLLL for Value-Type Pairs: 1.338
+2022-05-27 12:21:56,327 model.train INFO: EPOCH: [1] FINISHED loss summed: 3.947 loss MSE: 1.254 loss NLLL for Type: 1.132 loss NLLL for Value-Type Pairs: 1.561
+2022-05-27 12:21:56,328 model.train INFO: Finished Training
+2022-05-27 12:21:56,328 model.train INFO: Saving model ...
+2022-05-27 12:22:00,401 model.train INFO: Model saved as :output/27052022122156_model.pt
