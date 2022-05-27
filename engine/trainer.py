@@ -4,6 +4,7 @@ import logging
 import numpy as np
 import torch
 import datetime
+import glob
 
 
 def do_train(
@@ -23,7 +24,11 @@ def do_train(
     
     logger = logging.getLogger("model.train")
     logger.info("Start training")
-
+    i = 0
+    models = glob.glob(output_dir + '/*.pt')
+    if len(models) != 0:
+        model.load_state_dics(torch.load(models[-1]))
+        i = len(models)
     
     for epoch in range(epochs):  # loop over the dataset multiple times
         running_loss = 0.0
