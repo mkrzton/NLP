@@ -24,13 +24,15 @@ def do_train(
     
     logger = logging.getLogger("model.train")
     logger.info("Start training")
-    i = 0
+    j = 0
     models = glob.glob(output_dir + '/*.pt')
     if len(models) != 0:
-        model.load_state_dics(torch.load(models[-1]))
-        i = len(models)
-    
-    for epoch in range(epochs):  # loop over the dataset multiple times
+        print(models.sort())    
+        logger.info("Loaded last trained model - [%s].  If You wish to start from scratch, please remove models from output folder.", models[-1])
+        model.load_state_dict(torch.load(models[-1]))
+        j = len(models)
+
+    for epoch in range(j, epochs):  # loop over the dataset multiple times
         running_loss = 0.0
         running_loss1 = 0.0
         running_loss2= 0.0
@@ -78,9 +80,12 @@ def do_train(
         running_loss2 = 0.0
         running_loss3 = 0.0
 
-
-        logger.info('Finished Training')
-        logger.info('Saving model ...')
-        output_filename = output_dir + '/' + datetime.datetime.now().strftime("%d%m%Y%H%M%S") + '_model.pt'
-        torch.save(model.state_dict(), output_filename) 
-        logger.info('Model saved as :' + output_filename)
+        if((epoch+1) % 5 == 0):
+          logger.info('Finished Training')
+          logger.info('Saving model ...')
+          output_filename = datetime.datetime.now().strftime("%d%m%Y%H%M%S_") + str(epoch+1) + '_model.pt'
+          output_dest = output_dir + '/' + output_filename
+          torch.save(model.state_dict(), output_dest)
+          drive_path = F"/content/content/MyDrive/drive/{output_filename}" 
+          torch.save(model.state_dict(), drive_path) 
+          logger.info('Model saved as :' + output_filename)
